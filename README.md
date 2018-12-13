@@ -53,3 +53,11 @@ Section "ServerLayout"
     Screen 0 "intel"
 ```
 - Reboot
+- Download NVIDIA cuDNN tar file (https://developer.nvidia.com/cudnn)
+```bash
+tar -xzvf cudnn-10.0-linux-x64-v7.4.1.5.tgz
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+```
+- Done!
