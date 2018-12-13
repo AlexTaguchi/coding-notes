@@ -22,12 +22,9 @@ env LD_LIBRARY_PATH="~/.local/lib/" <command>
 ```
 
 ### Set up NVIDIA GTX 1080 Ti GPU on Ubuntu
-- Remove old NVIDIA installation
+- Remove old NVIDIA installation, and find and remove dependencies of deleted files
 ```bash
 sudo apt purge nvidia*
-```
-- Find and remove dependencies of deleted files
-```bash
 sudo apt autoremove
 ```
 - Download Nvidia driver installation runfile (https://www.nvidia.com/Download/index.aspx) and run script with the option --no-opengl-files:
