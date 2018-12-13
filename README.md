@@ -1,4 +1,4 @@
-# bash-notes
+# linux-notes
 Tips and tricks for using Bash (Unix shell command language)
 
 ### Adding a folder to your path in ~/.bashrc
