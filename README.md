@@ -1,5 +1,5 @@
 # linux-notes
-Tips and tricks for using Bash (Unix shell command language)
+Tips and tricks for my Linux setup
 
 ### Adding a folder to your path in ~/.bashrc
 ```bash
