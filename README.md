@@ -20,3 +20,18 @@ env LD_LIBRARY_PATH="~/.local/lib/" <command>
 ```bash
 <library>.so: wrong ELF class: ELFCLASS32
 ```
+
+### Set up NVIDIA GTX 1080 Ti GPU on Ubuntu
+- Remove old NVIDIA installation
+```bash
+sudo apt purge nvidia*
+```
+- Find and remove dependencies of deleted files
+```bash
+sudo apt autoremove
+```
+- Download Nvidia driver installation runfile (https://www.nvidia.com/Download/index.aspx) and run script with the option --no-opengl-files:
+```bash
+chmod a+x NVIDIA-Linux-x86_64-410.78.run
+sudo ./NVIDIA-Linux-x86_64-410.78.run --no-opengl-files
+```
