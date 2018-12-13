@@ -1,5 +1,5 @@
 # linux-notes
-Tips and tricks for my Linux setup
+Tips and tricks for a deep learning Linux setup
 
 ### Adding a folder to your path in ~/.bashrc
 ```bash
