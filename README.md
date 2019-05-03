@@ -19,6 +19,17 @@ env LD_LIBRARY_PATH="~/.local/lib/" <command>
 <library>.so: wrong ELF class: ELFCLASS32
 ```
 
+#### Run background process on remote computer
+After remoting in (ssh), create a personal screen only accessible by the user
+```bash
+screen -dR
+```
+Run the desired process. Detach the process with `ctrt-a + d`. Now you can do whatever you want, including ending the ssh session. After sshing back in, the following command brings the personal screen back up
+```bash
+screen -dR
+```
+See the previous output you missing while away with `ctrl-a esc`. Kill the screen with `exit` or `ctrl-d`.
+
 ---
 ### Setting up NVIDIA GTX 1080 Ti GPU on Ubuntu
 (Reference: https://gist.github.com/alexlee-gk/76a409f62a53883971a18a11af93241b)
