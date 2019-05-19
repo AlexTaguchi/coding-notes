@@ -30,6 +30,12 @@ screen -dR
 ```
 See the previous output you missing while away with `ctrl-a esc`. Kill the screen with `exit` or `ctrl-d`.
 
+#### Install python package from source
+```bash
+pip install -e /path/to/package
+```
+(The package should contain a setup.py file)
+
 ---
 ### Setting up NVIDIA GTX 1080 Ti GPU on Ubuntu
 (Reference: https://gist.github.com/alexlee-gk/76a409f62a53883971a18a11af93241b)
