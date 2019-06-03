@@ -27,11 +27,18 @@ pip install -e /path/to/package
 
 ---
 ### Remoting
+#### Generate public key
+`ssh-keygen` (push `Enter` a few times) generates a random public key at `~/.ssh/id_rsa.pub`
+
+#### Mount remote drive
+- Install FUSE and SSHFS on Mac (https://osxfuse.github.io/)
+- Create alias in `~/.bash_profile`: `alias <mount_alias>="sshfs -o rw,allow_other <username>@<ip_address>:/path/to/remote/drive /path/to/local/mount"`
+
 #### Configuration file
 Create or modify an ssh configuration file at `~/.ssh/config`. Add a host using the following template:
 ```bash
 Host <alias>
-HostName <IP_address>
+HostName <ip_address>
 User <username>
 Port <number>
 IdentityFile /path/to/private/key
