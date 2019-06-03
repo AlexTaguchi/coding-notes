@@ -3,7 +3,7 @@ Tips and tricks for a deep learning Linux setup
 
 ---
 ### Basics
-#### Adding an alias and exporting to path in ~/.bashrc ("exec bash" to implement changes)
+#### Adding an alias and exporting to path in ~/.bash_profile ("exec bash" to implement changes)
 ```bash
 alias <variable>="<command>"
 export PATH="<path>:$PATH"
