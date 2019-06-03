@@ -39,7 +39,7 @@ IdentityFile /path/to/private/key
 (`Port` and `IdentityFile` are optional)
 
 #### Run background process on remote computer
-After remoting in (ssh), create a personal screen only accessible by the user
+After sshing in, create a personal screen only accessible by the user
 ```bash
 screen -dR
 ```
