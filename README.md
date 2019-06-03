@@ -19,22 +19,35 @@ env LD_LIBRARY_PATH="~/.local/lib/" <command>
 <library>.so: wrong ELF class: ELFCLASS32
 ```
 
-#### Run background process on remote computer
-After remoting in (ssh), create a personal screen only accessible by the user
-```bash
-screen -dR
-```
-Run the desired process. Detach the process with `ctrt-a + d`. Now you can do whatever you want, including ending the ssh session. After sshing back in, the following command brings the personal screen back up
-```bash
-screen -dR
-```
-See the previous output you missing while away with `ctrl-a esc`. Kill the screen with `exit` or `ctrl-d`.
-
 #### Install python package from source
 ```bash
 pip install -e /path/to/package
 ```
 (The package should contain a setup.py file)
+
+---
+### Remoting
+#### Configuration file
+Create or modify an ssh configuration file at `~/.ssh/config`. Add a host using the following template:
+```bash
+Host <alias>
+HostName <IP_address>
+User <username>
+Port <number>
+IdentityFile /path/to/private/key
+```
+(`Port` and `IdentityFile` are optional)
+
+#### Run background process on remote computer
+After remoting in (ssh), create a personal screen only accessible by the user
+```bash
+screen -dR
+```
+Run the desired process. Detach the process with `ctrt-a` then `d`. Now you can do whatever you want, including ending the ssh session. After sshing back in, the following command brings the personal screen back up
+```bash
+screen -dR
+```
+See the previous output you missing while away with `ctrl-a` then `esc`. Kill the screen with `exit` or `ctrl-d`.
 
 ---
 ### Setting up NVIDIA GTX 1080 Ti GPU on Ubuntu
