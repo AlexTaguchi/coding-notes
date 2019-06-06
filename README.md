@@ -57,6 +57,22 @@ screen -dR
 See the previous output you missing while away with `ctrl-a` then `esc`. Kill the screen with `exit` or `ctrl-d`.
 
 ---
+### VS Code
+#### Basic Editing
+- Keyboard Shortcuts: https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference
+- Customize Keyboard Shortcuts: https://code.visualstudio.com/docs/getstarted/keybindings#_customizing-shortcuts
+- Manual multiple selections: Create multiple cursors to edit different sections simultaneously with `Alt-Click`
+- Automatic multiple selections: Highlight word of interest, and use `⌘D` to select subsequent occurances
+- Column (box) selection: `Shift+Option(⌥)`
+
+#### Extensions
+(Reference: https://medium.com/issuehunt/10-visual-studio-code-extensions-for-python-development-de0be51bbeed)
+- `Python` by Microsoft: Linting, debugging, IntelliSense, code navigation, code formatting, refactoring, unit tests, snippets, and more
+  - Enable `Data Science: Send Selection To Interactive Window` setting
+- `autoDocstring` by Nils Werner: Quickly generate docstring snippets that can be tabbed through
+- `Code Runner` by Jun Han: Execute statements from a variety of languages and output the results to the built-in Output Window
+
+---
 ### Setting up NVIDIA GTX 1080 Ti GPU on Ubuntu
 (Reference: https://gist.github.com/alexlee-gk/76a409f62a53883971a18a11af93241b)
 - Remove old NVIDIA installation and its dependencies
