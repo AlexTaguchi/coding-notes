@@ -78,6 +78,7 @@ See the previous output you missing while away with `ctrl-a` then `esc`. Kill th
 - `Python` by Microsoft: Linting, debugging, IntelliSense, code navigation, code formatting, refactoring, unit tests, snippets, and more
   - Enable `Data Science: Send Selection To Interactive Window` setting
 - `autoDocstring` by Nils Werner: Quickly generate docstring snippets that can be tabbed through
+![autoDocstring](autoDocstring.gif)
 - `Code Runner` by Jun Han: Execute statements from a variety of languages and output the results to the built-in Output Window
 
 ---
