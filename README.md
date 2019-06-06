@@ -61,9 +61,17 @@ See the previous output you missing while away with `ctrl-a` then `esc`. Kill th
 #### Basic Editing
 - Keyboard Shortcuts: https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference
 - Customize Keyboard Shortcuts: https://code.visualstudio.com/docs/getstarted/keybindings#_customizing-shortcuts
+  - Code -> Preferences -> Keyboard Shortcuts
+  - Search for command
+  - Change/add keybinding by clicking the pencil symbol
 - Manual multiple selections: Create multiple cursors to edit different sections simultaneously with `Alt-Click`
 - Automatic multiple selections: Highlight word of interest, and use `⌘D` to select subsequent occurances
 - Column (box) selection: `Shift+Option(⌥)`
+
+#### Running Code
+- Standard run: `Play Button (▷)` or `Ctrl+Option+N` - Uses `Code Runner` to execute script in Output Window. No code interactivity after run completes. Can be canceled during the run with `Ctrl+Option+N`
+- Interactive run all: `Ctrl+Enter` - Runs file in Python Interactive Window (must bind `Ctrl+Enter` to `Run Current File in Python Interactive Window` in Code -> Preferences -> Keyboard Shortcuts)
+- Interactive run selected: `Shift+Enter` - Runs highlighted selection or line in  Python Interactive Window
 
 #### Extensions
 (Reference: https://medium.com/issuehunt/10-visual-studio-code-extensions-for-python-development-de0be51bbeed)
