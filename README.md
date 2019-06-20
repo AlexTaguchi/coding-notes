@@ -1,5 +1,5 @@
-# linux-notes
-Tips and tricks for a deep learning Linux setup
+# unix-notes
+Tips and tricks for a setting up a Unix environment for machine learning
 
 ---
 ### Basics
