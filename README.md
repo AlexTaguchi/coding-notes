@@ -82,6 +82,19 @@ See the previous output you missing while away with `ctrl-a` then `esc`. Kill th
 - `Code Runner` by Jun Han: Execute statements from a variety of languages and output the results to the built-in Output Window
 
 ---
+### Git
+#### Overwrite local repository with remote master
+```bash
+git fetch --all
+git reset --hard origin/master
+```
+In general you can overwrite the local with any branch as follows:
+```bash
+git fetch --all
+git reset --hard origin/<branch_name>
+```
+
+---
 ### Setting up NVIDIA GTX 1080 Ti GPU on Ubuntu
 (Reference: https://gist.github.com/alexlee-gk/76a409f62a53883971a18a11af93241b)
 - Remove old NVIDIA installation and its dependencies
