@@ -58,28 +58,40 @@ See the previous output you missing while away with `ctrl-a` then `esc`. Kill th
 
 ---
 ### VS Code
-#### Basic Editing
+#### Extensions
+Click the Extensions icon (looks like a box) on the left sidebar and install the following:
+- `Python` by Microsoft: Linting, debugging, IntelliSense, code navigation, code formatting, refactoring, unit tests, snippets, and more
+- `Code Runner` by Jun Han: Execute statements from a variety of languages and output the results to the built-in Output Window
+- `autoDocstring` by Nils Werner: Quickly generate docstring snippets that can be tabbed through
+
+(Reference: https://medium.com/issuehunt/10-visual-studio-code-extensions-for-python-development-de0be51bbeed)
+
+#### Customize User Settings
+Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> `{}` (upper-right corner), and add the following code:
+```
+{
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.saveFileBeforeRun": true,
+    "git.autofetch": true,
+    "python.pythonPath": "/anaconda3/bin/python3",
+    "python.terminal.launchArgs": ["-i"],
+    "terminal.integrated.inheritEnv": false
+}
+```
+
+#### Running Code
+- Standard run: `Play Button (▷)` or `Ctrl+Option+N` - Uses `Code Runner` to execute script in Output Window. No code interactivity after run completes. Can be canceled during the run with `Ctrl+Option+M`
+- Interactive run: `Ctrl+Enter` - Runs file in Terminal Window (must bind `Ctrl+Enter` to `Run Python File in Terminal` in Code -> Preferences -> Keyboard Shortcuts)
+
+#### Editing Shortcuts
+- Column (box) selection: `Shift+Option(⌥)`
+- Automatic multiple selections: Highlight word of interest, and use `⌘D` to select subsequent occurances
 - Keyboard Shortcuts: https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference
 - Customize Keyboard Shortcuts: https://code.visualstudio.com/docs/getstarted/keybindings#_customizing-shortcuts
   - Code -> Preferences -> Keyboard Shortcuts
   - Search for command
   - Change/add keybinding by clicking the pencil symbol
-- Manual multiple selections: Create multiple cursors to edit different sections simultaneously with `Alt-Click`
-- Automatic multiple selections: Highlight word of interest, and use `⌘D` to select subsequent occurances
-- Column (box) selection: `Shift+Option(⌥)`
-
-#### Running Code
-- Standard run: `Play Button (▷)` or `Ctrl+Option+N` - Uses `Code Runner` to execute script in Output Window. No code interactivity after run completes. Can be canceled during the run with `Ctrl+Option+N`
-- Interactive run all: `Ctrl+Enter` - Runs file in Python Interactive Window (must bind `Ctrl+Enter` to `Run Current File in Python Interactive Window` in Code -> Preferences -> Keyboard Shortcuts)
-- Interactive run selected: `Shift+Enter` - Runs highlighted selection or line in  Python Interactive Window
-
-#### Extensions
-(Reference: https://medium.com/issuehunt/10-visual-studio-code-extensions-for-python-development-de0be51bbeed)
-- `Python` by Microsoft: Linting, debugging, IntelliSense, code navigation, code formatting, refactoring, unit tests, snippets, and more
-  - Enable `Data Science: Send Selection To Interactive Window` setting
-- `autoDocstring` by Nils Werner: Quickly generate docstring snippets that can be tabbed through
-![autoDocstring](autoDocstring.gif)
-- `Code Runner` by Jun Han: Execute statements from a variety of languages and output the results to the built-in Output Window
 
 ---
 ### Git
