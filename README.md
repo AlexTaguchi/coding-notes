@@ -1,5 +1,5 @@
-# unix-notes
-Tips and tricks for a setting up a Unix environment for machine learning
+# ml-setup
+Tips and tricks for a setting up a coding environment for machine learning
 
 ---
 ### Basics
