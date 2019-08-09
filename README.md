@@ -56,6 +56,19 @@ screen -dR
 ```
 See the previous output you missing while away with `ctrl-a` then `esc`. Kill the screen with `exit` or `ctrl-d`.
 
+
+---
+### VI
+#### Find and replace one at a time
+```
+:%s/<string-to-find>/<replacement-string>/gc
+```
+
+#### Find and replace all at once
+```
+:%s/<string-to-find>/<replacement-string>/g
+```
+
 ---
 ### VS Code
 #### Extensions
