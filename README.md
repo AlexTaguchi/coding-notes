@@ -84,7 +84,6 @@ Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> `{
 ```
 {
     "code-runner.clearPreviousOutput": true,
-    "code-runner.fileDirectoryAsCwd": true,
     "code-runner.saveFileBeforeRun": true,
     "git.autofetch": true,
     "python.pythonPath": "/anaconda3/bin/python3",
