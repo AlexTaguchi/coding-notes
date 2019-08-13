@@ -80,7 +80,7 @@ Click the Extensions icon (looks like a box) on the left sidebar and install the
 (Reference: https://medium.com/issuehunt/10-visual-studio-code-extensions-for-python-development-de0be51bbeed)
 
 #### Customize User Settings
-Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> `{}` (upper-right corner), and add the following code:
+Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> Open Settings (upper-right corner), and add the following code:
 ```
 {
     "code-runner.clearPreviousOutput": true,
