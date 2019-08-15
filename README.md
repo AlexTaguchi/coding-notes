@@ -107,6 +107,10 @@ Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> Op
 
 ---
 ### Git
+#### Markdown symbols in README.md
+- &deg; `&deg;`
+- &plusmn; `&plusmn;`
+
 #### Overwrite local repository with remote master
 ```bash
 git fetch --all
