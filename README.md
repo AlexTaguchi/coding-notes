@@ -26,12 +26,28 @@ pip install -e /path/to/package
 (The package should contain a setup.py file)
 
 ---
-### FISH
+### Fish
 #### Installation on Mac
+(https://medium.com/tuannguyendotme/set-up-the-fish-shell-on-mac-step-by-step-6a77bcb2687c)
 ```bash
+# Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Fish
 brew install fish
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s `which fish`
+
+# Oh My Fish
+curl -L https://get.oh-my.fish | fish
+
+# Bob the fish
+omf install bobthefish
+
+# Nerd fonts
+brew tap caskroom/fonts
+brew cask install font-firacode-nerd-font
+set -U theme_nerd_fonts yes
 ```
 
 ---
@@ -92,12 +108,25 @@ Click the Extensions icon (looks like a box) on the left sidebar and install the
 Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> Open Settings (upper-right corner), and add the following code:
 ```
 {
+    // Code Runner
     "code-runner.clearPreviousOutput": true,
     "code-runner.saveFileBeforeRun": true,
+
+    // Fish
+    "terminal.integrated.fontFamily": "FuraCode Nerd Font",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+
+    // Git
     "git.autofetch": true,
+
+    // Python
     "python.pythonPath": "/anaconda3/bin/python3",
     "python.terminal.launchArgs": ["-i"],
-    "terminal.integrated.inheritEnv": false
+    "terminal.integrated.inheritEnv": false,
+
+    // VS Code
+    "files.autoSave": "off",
 }
 ```
 
