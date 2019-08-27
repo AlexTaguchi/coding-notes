@@ -57,13 +57,18 @@ pip install -e /path/to/package
 7) Config file
     ```bash
     echo > ~/.config/fish/config.fish "\
-    # Git
-    set -g theme_display_git_untracked no
-    set -g theme_display_git_master_branch yes
-
     # Anaconda
     source /anaconda3/etc/fish/conf.d/conda.fish
-    conda activate"
+    conda activate
+
+    # Fish
+    set -g theme_date_format '+%Y/%m/%d %H:%M:%S'
+    set -g theme_newline_cursor yes
+    set -g theme_newline_prompt '\$ '
+
+    # Git
+    set -g theme_display_git_untracked no
+    set -g theme_display_git_master_branch yes"
     ```
 8) Finally, change the default Terminal font to see the powerline symbols: `Terminal -> Preferences -> Font -> Change -> {Collection: All Fonts, Family: FuraCode Nerd Font}`
 #### Mac Uninstall
