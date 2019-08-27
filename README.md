@@ -49,12 +49,17 @@ brew tap caskroom/fonts
 brew cask install font-firacode-nerd-font
 set -U theme_nerd_fonts yes
 
+# Configuration
+echo > ~/.config/fish/config.fish "\
+# Git
+set -g theme_display_git_untracked no
+set -g theme_display_git_master_branch yes
+
 # Anaconda
-echo "# Anaconda" >> ~/.config/fish/config.fish
-echo "source /anaconda3/etc/fish/conf.d/conda.fish" >> ~/.config/fish/config.fish
-echo "conda activate" >> ~/.config/fish/config.fish
+source /anaconda3/etc/fish/conf.d/conda.fish
+conda activate"
 ```
-Finally, change the default Terminal font: Terminal -> Preferences -> Font -> Change -> {Collection: All Fonts, Family: FuraCode Nerd Font}
+Finally, change the default Terminal font to see the powerline symbols: Terminal -> Preferences -> Font -> Change -> {Collection: All Fonts, Family: FuraCode Nerd Font}
 
 ---
 ### Remoting
