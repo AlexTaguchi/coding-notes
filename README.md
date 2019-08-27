@@ -27,7 +27,7 @@ pip install -e /path/to/package
 
 ---
 ### Fish
-#### Mac Installation
+#### Mac Install
 (https://medium.com/tuannguyendotme/set-up-the-fish-shell-on-mac-step-by-step-6a77bcb2687c)
 1) Homebrew
     ```bash
@@ -38,7 +38,7 @@ pip install -e /path/to/package
     brew install fish
     echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
     ```
-3) Switch to Fish shell
+3) Change to Fish shell
     ```bash
     chsh -s `which fish`
     ```
@@ -66,6 +66,15 @@ pip install -e /path/to/package
     conda activate"
     ```
 8) Finally, change the default Terminal font to see the powerline symbols: `Terminal -> Preferences -> Font -> Change -> {Collection: All Fonts, Family: FuraCode Nerd Font}`
+#### Mac Uninstall
+1) Change to Bash shell
+    ```bash
+    chsh -s `which bash`
+    ```
+2) Uninstall with Homebrew
+    ```bash
+    brew uninstall fish
+    ```
 
 ---
 ### Remoting
