@@ -1,5 +1,5 @@
-# ml-setup
-Tips and tricks for a setting up a coding environment for machine learning
+# coding-setup
+Tips and tricks for setting up and interacting with my coding environment
 
 ---
 ### Basics
@@ -24,6 +24,15 @@ env LD_LIBRARY_PATH="~/.local/lib/" <command>
 pip install -e /path/to/package
 ```
 (The package should contain a setup.py file)
+
+---
+### FISH
+#### Installation on Mac
+```bash
+brew install fish
+echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+chsh -s `which fish`
+```
 
 ---
 ### Remoting
