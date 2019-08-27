@@ -27,39 +27,41 @@ pip install -e /path/to/package
 
 ---
 ### Fish
-#### Installation on Mac
+#### Mac Installation
 (https://medium.com/tuannguyendotme/set-up-the-fish-shell-on-mac-step-by-step-6a77bcb2687c)
-```bash
-# Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+1) Homebrew
+    ```bash
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ```
+2) Fish
+    ```bash
+    brew install fish
+    echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+    chsh -s `which fish`
+    ```
+3) Bob the fish
+    ```bash
+    curl -L https://get.oh-my.fish | fish
+    omf install bobthefish
+    ```
+4) Nerd fonts
+    ```bash
+    brew tap caskroom/fonts
+    brew cask install font-firacode-nerd-font
+    set -U theme_nerd_fonts yes
+    ```
+5) Config file
+    ```bash
+    echo > ~/.config/fish/config.fish "\
+    # Git
+    set -g theme_display_git_untracked no
+    set -g theme_display_git_master_branch yes
 
-# Fish
-brew install fish
-echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-chsh -s `which fish`
-
-# Oh My Fish
-curl -L https://get.oh-my.fish | fish
-
-# Bob the fish
-omf install bobthefish
-
-# Nerd fonts
-brew tap caskroom/fonts
-brew cask install font-firacode-nerd-font
-set -U theme_nerd_fonts yes
-
-# Configuration
-echo > ~/.config/fish/config.fish "\
-# Git
-set -g theme_display_git_untracked no
-set -g theme_display_git_master_branch yes
-
-# Anaconda
-source /anaconda3/etc/fish/conf.d/conda.fish
-conda activate"
-```
-Finally, change the default Terminal font to see the powerline symbols: Terminal -> Preferences -> Font -> Change -> {Collection: All Fonts, Family: FuraCode Nerd Font}
+    # Anaconda
+    source /anaconda3/etc/fish/conf.d/conda.fish
+    conda activate"
+    ```
+6) Finally, change the default Terminal font to see the powerline symbols: `Terminal -> Preferences -> Font -> Change -> {Collection: All Fonts, Family: FuraCode Nerd Font}`
 
 ---
 ### Remoting
