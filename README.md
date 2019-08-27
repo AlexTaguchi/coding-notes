@@ -37,20 +37,24 @@ pip install -e /path/to/package
     ```bash
     brew install fish
     echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+    ```
+3) Switch to Fish shell
+    ```bash
     chsh -s `which fish`
     ```
-3) Bob the fish
+4) Launch new terminal
+5) Bob the fish
     ```bash
     curl -L https://get.oh-my.fish | fish
     omf install bobthefish
     ```
-4) Nerd fonts
+6) Nerd fonts
     ```bash
     brew tap caskroom/fonts
     brew cask install font-firacode-nerd-font
     set -U theme_nerd_fonts yes
     ```
-5) Config file
+7) Config file
     ```bash
     echo > ~/.config/fish/config.fish "\
     # Git
@@ -61,7 +65,7 @@ pip install -e /path/to/package
     source /anaconda3/etc/fish/conf.d/conda.fish
     conda activate"
     ```
-6) Finally, change the default Terminal font to see the powerline symbols: `Terminal -> Preferences -> Font -> Change -> {Collection: All Fonts, Family: FuraCode Nerd Font}`
+8) Finally, change the default Terminal font to see the powerline symbols: `Terminal -> Preferences -> Font -> Change -> {Collection: All Fonts, Family: FuraCode Nerd Font}`
 
 ---
 ### Remoting
