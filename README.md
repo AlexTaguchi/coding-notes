@@ -25,6 +25,11 @@ pip install -e /path/to/package
 ```
 (The package should contain a setup.py file)
 
+#### View first 10 sorted entries based on second column
+```bash
+sort -n -k2 <text.txt> | head
+```
+
 ---
 ### Fish
 #### Mac Install
