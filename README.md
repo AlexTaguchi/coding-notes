@@ -146,6 +146,7 @@ Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> Op
 {
     // Code Runner
     "code-runner.clearPreviousOutput": true,
+    "code-runner.fileDirectoryAsCwd": true,
     "code-runner.saveFileBeforeRun": true,
 
     // Fish
@@ -158,11 +159,13 @@ Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> Op
 
     // Python
     "python.pythonPath": "/anaconda3/bin/python3",
+    "python.terminal.executeInFileDir": true,
     "python.terminal.launchArgs": ["-i"],
     "terminal.integrated.inheritEnv": false,
 
     // VS Code
     "files.autoSave": "off",
+    "diffEditor.ignoreTrimWhitespace": false,
 }
 ```
 
