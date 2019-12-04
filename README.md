@@ -30,6 +30,16 @@ pip install -e /path/to/package
 sort -n -k2 <text.txt> | head
 ```
 
+#### Unzip file into new directory
+```bash
+unzip <file.zip> -d /path/to/new/directory
+```
+
+#### Copy contents of folder into another folder with rsync
+```bash
+rsync -av /path/to/old/folder /path/to/new/folder
+```
+
 ---
 ### Fish
 #### Mac Install
