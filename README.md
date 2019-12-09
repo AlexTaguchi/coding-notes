@@ -73,7 +73,7 @@ rsync -av /path/to/old/folder /path/to/new/folder
     ```bash
     echo > ~/.config/fish/config.fish "\
     # Anaconda
-    source /anaconda3/etc/fish/conf.d/conda.fish
+    source path/to/anaconda3/etc/fish/conf.d/conda.fish
     conda activate
 
     # Fish
