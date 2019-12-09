@@ -65,7 +65,7 @@ rsync -av /path/to/old/folder /path/to/new/folder
     ```
 6) Nerd fonts
     ```fish
-    brew tap caskroom/fonts
+    brew tap homebrew/cask-fonts
     brew cask install font-firacode-nerd-font
     set -U theme_nerd_fonts yes
     ```
