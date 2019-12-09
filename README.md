@@ -59,18 +59,18 @@ rsync -av /path/to/old/folder /path/to/new/folder
     ```
 4) Launch new terminal
 5) Bob the fish
-    ```bash
+    ```fish
     curl -L https://get.oh-my.fish | fish
     omf install bobthefish
     ```
 6) Nerd fonts
-    ```bash
+    ```fish
     brew tap caskroom/fonts
     brew cask install font-firacode-nerd-font
     set -U theme_nerd_fonts yes
     ```
 7) Config file
-    ```bash
+    ```fish
     echo > ~/.config/fish/config.fish "\
     # Anaconda
     source path/to/anaconda3/etc/fish/conf.d/conda.fish
@@ -88,13 +88,30 @@ rsync -av /path/to/old/folder /path/to/new/folder
 8) Finally, change the default Terminal font to see the powerline symbols: `Terminal -> Preferences -> Font -> Change -> {Collection: All Fonts, Family: FuraCode Nerd Font}`
 #### Mac Uninstall
 1) Change to Bash shell
-    ```bash
+    ```fish
     chsh -s `which bash`
     ```
 2) Uninstall with Homebrew
     ```bash
     brew uninstall fish
     ```
+#### Config File
+`~/.config/fish/config.fish`
+- Create alias:
+    ```fish
+    function <variable>
+         <command> $argv
+    end
+    ```
+    or, equivalently
+    ```fish
+    alias <variable>="<command>"
+    ```
+- Extend PATH:
+    ```fish
+    set -x PATH $PATH <path>
+    ```
+
 
 ---
 ### Remoting
@@ -147,8 +164,11 @@ Click the Extensions icon (looks like a box) on the left sidebar and install the
 - `Python` by Microsoft: Linting, debugging, IntelliSense, code navigation, code formatting, refactoring, unit tests, snippets, and more
 - `Code Runner` by Jun Han: Execute statements from a variety of languages and output the results to the built-in Output Window
 - `autoDocstring` by Nils Werner: Quickly generate docstring snippets that can be tabbed through
+- `Remote Development` by Microsoft: Edit and interact with files and folders on a remote machine
 
-(Reference: https://medium.com/issuehunt/10-visual-studio-code-extensions-for-python-development-de0be51bbeed)
+*References:*
+- https://medium.com/issuehunt/10-visual-studio-code-extensions-for-python-development-de0be51bbeed
+- https://code.visualstudio.com/docs/remote/ssh
 
 #### Customize User Settings
 Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> Open Settings (upper-right corner), and add the following code:
