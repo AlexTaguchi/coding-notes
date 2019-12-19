@@ -176,6 +176,7 @@ Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> Op
 {
     // Code Runner
     "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {"python": "/opt/anaconda3/bin/python"},
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.saveFileBeforeRun": true,
 
@@ -188,7 +189,7 @@ Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> Op
     "git.autofetch": true,
 
     // Python
-    "python.pythonPath": "/anaconda3/bin/python3",
+    "python.pythonPath": "/opt/anaconda3/bin/python",
     "python.terminal.executeInFileDir": true,
     "python.terminal.launchArgs": ["-i"],
     "terminal.integrated.inheritEnv": false,
