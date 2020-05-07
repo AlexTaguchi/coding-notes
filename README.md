@@ -40,6 +40,11 @@ unzip <file.zip> -d /path/to/new/directory
 rsync -av /path/to/old/folder /path/to/new/folder
 ```
 
+#### Increase number of files that can be opened at once
+```bash
+ulimit -n <number>
+```
+
 ---
 ### Fish
 #### Mac Install
