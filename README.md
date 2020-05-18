@@ -3,7 +3,7 @@ Tips and tricks for setting up and interacting with my coding environment
 
 ---
 ### Basics
-#### Creating an alias and adding to path
+#### Permanently creating an alias or adding to path
 - Bash (`~/.bash_profile` on Mac, `~/.bashrc` on Ubuntu)
   ```bash
   alias <variable>="<command>"
