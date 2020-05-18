@@ -3,27 +3,17 @@ Tips and tricks for setting up and interacting with my coding environment
 
 ---
 ### Basics
-#### Adding an alias and exporting to path in ~/.bash_profile ("exec bash" to implement changes)
-```bash
-alias <variable>="<command>"
-export PATH="<path>:$PATH"
-```
-
-#### Creating a temporary environment to run a command that requires libraries you don't want to install on your system
-```bash
-env LD_LIBRARY_PATH="~/.local/lib/" <command>
-```
-
-#### Wrong ELF class usually means you're using the wrong bit version (32 vs 64)
-```bash
-<library>.so: wrong ELF class: ELFCLASS32
-```
-
-#### Install python package from source
-```bash
-pip install -e /path/to/package
-```
-(The package should contain a setup.py file)
+#### Creating an alias and adding to path
+- Bash (`~/.bash_profile` on Mac, `~/.bashrc` on Ubuntu)
+  ```bash
+  alias <variable>="<command>"
+  export PATH="<path>:$PATH"
+  ```
+- Zsh (`~/.zsh` on Mac, `~/.zshrc` on Ubuntu)
+  ```zsh
+  alias <variable>="<command>"
+  export PATH="<path>:$PATH"
+  ```
 
 #### View first 10 sorted entries based on second column
 ```bash
