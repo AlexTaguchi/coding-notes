@@ -4,15 +4,20 @@ Tips and tricks for setting up and interacting with my coding environment
 ---
 ### Basics
 #### Permanently creating an alias or adding to path
-- Bash (`~/.bash_profile` on Mac, `~/.bashrc` on Ubuntu)
+- Bash (`~/.bashrc` on Ubuntu, `~/.bash_profile` on Mac)
   ```bash
   alias <variable>="<command>"
   export PATH="<path>:$PATH"
   ```
-- Zsh (`~/.zsh` on Mac, `~/.zshrc` on Ubuntu)
+- Zsh (`~/.zshrc` on Ubuntu, `~/.zprofile` on Mac)
   ```zsh
   alias <variable>="<command>"
   export PATH="<path>:$PATH"
+  ```
+- Fish (`~/.config/fish/config.fish`)
+  ```fish
+  alias <variable>="<command>"
+  set -x PATH $PATH <path>
   ```
 
 #### View first 10 sorted entries based on second column
