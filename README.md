@@ -2,7 +2,7 @@
 Tips and tricks for setting up and interacting with my coding environment
 
 ---
-### Basics
+### Shell scripting
 #### Permanently creating an alias or adding to path
 - Bash (`~/.bashrc` on Ubuntu, `~/.bash_profile` on Mac)
   ```bash
@@ -19,6 +19,40 @@ Tips and tricks for setting up and interacting with my coding environment
   alias <variable>="<command>"
   set -x PATH $PATH <path>
   ```
+
+#### Setting a variable
+- Bash/Zsh: `<variable>=<number/string>; echo "The value is $<variable>"`
+- Fish: `set <variable> <number/string>; echo "The value is $<variable>"`
+
+#### Array operations
+- Bash/Zsh:
+  ```bash
+  <array>=(<element1> <element2> <element3>)
+  # First: ${<array>[0]} (0-indexed)
+  # Last: ${<array>[-1]}
+  # Slice: ${<array>[@]:<s>:<n>} (<s> = starting index, <n> = number of elements)
+  # Append: <array>+=(<element4>)
+  # Overwrite: <array>[0]=<element4>
+  ```
+- Fish:
+  ```fish
+  set <array> <element1> <element2> <element3>
+  # First: $<array>[1] (1-indexed)
+  # Last: $<array>[-1]
+  # Slice: $<array>[<s>..<e>] (<s> = starting index, <e> = ending index)
+  # Append: set -a <array> <element4> (append), set -p <array> <element4> (prepend)
+  # Overwrite: set <array>[1] <element4>
+  ```
+
+#### For loop
+```bash
+for VARIABLE in 1 2 3 4 5 .. N
+do
+	command1
+	command2
+	commandN
+done
+```
 
 #### View first 10 sorted entries based on second column
 ```bash
