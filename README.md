@@ -1,4 +1,4 @@
-# coding-setup
+# coding-notes
 Tips and tricks for setting up and interacting with my coding environment
 
 ---
