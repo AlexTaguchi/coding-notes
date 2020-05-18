@@ -46,7 +46,7 @@ Tips and tricks for setting up and interacting with my coding environment
   # Overwrite: set <array>[1] <element4>
   ```
 
-#### For loop
+#### For loops
 - Bash/Zsh:
   ```bash
   for <variable> in <iterable>
@@ -71,7 +71,20 @@ Tips and tricks for setting up and interacting with my coding environment
   # Glob: <iterable> = glob/path/*.ext
   ```
 
-#### View first 10 sorted entries based on second column
+#### Conditionals
+- Bash/Zsh:
+  ```bash
+  if 
+  # 
+  ```
+- Fish:
+  ```fish
+  if 
+  end
+  # 
+  ```
+
+#### Sort file based on second column and view first 10 entries
 ```bash
 sort -n -k2 <text.txt> | head
 ```
@@ -137,6 +150,7 @@ ulimit -n <number>
     set -g theme_display_git_master_branch yes"
     ```
 8) Finally, change the default Terminal font to see the powerline symbols: `Terminal -> Preferences -> Font -> Change -> {Collection: All Fonts, Family: FuraCode Nerd Font}`
+
 #### Mac Uninstall
 1) Change to Bash shell
     ```fish
@@ -145,22 +159,6 @@ ulimit -n <number>
 2) Uninstall with Homebrew
     ```bash
     brew uninstall fish
-    ```
-#### Config File
-`~/.config/fish/config.fish`
-- Create alias:
-    ```fish
-    function <variable>
-         <command> $argv
-    end
-    ```
-    or, equivalently
-    ```fish
-    alias <variable>="<command>"
-    ```
-- Extend PATH:
-    ```fish
-    set -x PATH $PATH <path>
     ```
 
 
@@ -270,16 +268,22 @@ Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> Op
 - &deg; `&deg;`
 - &plusmn; `&plusmn;`
 
+#### Undo last add
+```bash
+git reset
+```
+
+#### Undo last commit
+```bash
+git reset --soft HEAD~1
+```
+
 #### Overwrite local repository with remote master
 ```bash
 git fetch --all
 git reset --hard origin/master
 ```
-In general you can overwrite the local with any branch as follows:
-```bash
-git fetch --all
-git reset --hard origin/<branch_name>
-```
+
 
 ---
 ### Setting up NVIDIA GTX 1080 Ti GPU on Ubuntu
