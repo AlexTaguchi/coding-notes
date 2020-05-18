@@ -187,7 +187,7 @@ After sshing in, create a personal screen only accessible by the user
 ```bash
 screen -dR
 ```
-Run the desired process. Detach the process with `ctrt-a` then `d`. Now you can do whatever you want, including ending the ssh session. After sshing back in, the following command brings the personal screen back up
+Run the desired process. Detach the process with `ctrl-a` then `d`. Now you can do whatever you want, including ending the ssh session. After sshing back in, the following command brings the personal screen back up
 ```bash
 screen -dR
 ```
