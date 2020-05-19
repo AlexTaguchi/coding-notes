@@ -312,53 +312,53 @@ git reset --hard origin/master
 ### NVIDIA Titan RTX GPU on Ubuntu 18
 (Reference: https://gist.github.com/alexlee-gk/76a409f62a53883971a18a11af93241b)
 - Uninstall old NVIDIA drivers
-```bash
-sudo nvidia-uninstall
-sudo apt purge nvidia*
-sudo apt autoremove
-```
+  ```bash
+  sudo nvidia-uninstall
+  sudo apt purge nvidia*
+  sudo apt autoremove
+  ```
 - Download NVIDIA driver installation runfile (https://www.nvidia.com/Download/index.aspx) and run with --no-opengl-files:
-```bash
-chmod +x NVIDIA-Linux-x86_64-430.09.run
-sudo ./NVIDIA-Linux-x86_64-430.09.run --no-opengl-files
-```
+  ```bash
+  chmod +x NVIDIA-Linux-x86_64-430.09.run
+  sudo ./NVIDIA-Linux-x86_64-430.09.run --no-opengl-files
+  ```
 - Download NVIDIA CUDA "runfile (local)" (https://developer.nvidia.com/cuda-downloads) and run script (respond "no" when asked "Install NVIDIA accelerated Graphics Driver...?"):
-```bash
-chmod +x cuda_10.1.105_418.39_linux.run
-sudo ./cuda_10.1.105_418.39_linux.run
-```
+  ```bash
+  chmod +x cuda_10.1.105_418.39_linux.run
+  sudo ./cuda_10.1.105_418.39_linux.run
+  ```
 - Modify or create `/etc/X11/xorg.conf` to avoid using NVIDIA GPU for primary screen (BusID outputs of `lspci | egrep 'VGA|3D'` must match):
-```bash
-Section "ServerLayout"
-    Identifier "layout"
-    Screen 0 "intel"
-    Screen 1 "nvidia"
-EndSection
-
-Section "Device"
-    Identifier "intel"
-    Driver "intel"
-    BusID "PCI:0@0:2:0"
-    Option "AccelMethod" "SNA"
-EndSection
-
-Section "Screen"
-    Identifier "intel"
-    Device "intel"
-EndSection
-
-Section "Device"
-    Identifier "nvidia"
-    Driver "nvidia"
-    BusID "PCI:1@0:0:0"
-    Option "ConstrainCursor" "off"
-EndSection
-
-Section "Screen"
-    Identifier "nvidia"
-    Device "nvidia"
-    Option "AllowEmptyInitialConfiguration" "on"
-    Option "IgnoreDisplayDevices" "CRT"
-EndSection
-```
+  ```bash
+  Section "ServerLayout"
+      Identifier "layout"
+      Screen 0 "intel"
+      Screen 1 "nvidia"
+  EndSection
+  
+  Section "Device"
+      Identifier "intel"
+      Driver "intel"
+      BusID "PCI:0@0:2:0"
+      Option "AccelMethod" "SNA"
+  EndSection
+  
+  Section "Screen"
+      Identifier "intel"
+      Device "intel"
+  EndSection
+  
+  Section "Device"
+      Identifier "nvidia"
+      Driver "nvidia"
+      BusID "PCI:1@0:0:0"
+      Option "ConstrainCursor" "off"
+  EndSection
+  
+  Section "Screen"
+      Identifier "nvidia"
+      Device "nvidia"
+      Option "AllowEmptyInitialConfiguration" "on"
+      Option "IgnoreDisplayDevices" "CRT"
+  EndSection
+  ```
 - Reboot
