@@ -107,6 +107,10 @@ Tips and tricks for setting up and interacting with my coding environment
   # NOTE: "test <condition>" construct can be replaced with a command for testing exit status
   ```
 
+#### Pause and resume terminal job
+- Pause job: `ctrl-z`
+- Resume job: `fg` (or `fg %<job>` using the output of `jobs`)
+
 #### Zip directory recursively and unzip into new directory
 ```bash
 zip -r <file.zip> path/to/directory/to/zip
