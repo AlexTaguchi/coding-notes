@@ -6,17 +6,17 @@ Tips and tricks for setting up and interacting with my coding environment
 #### Permanently creating an alias or adding to path
 - Bash (`~/.bashrc` on Ubuntu, `~/.bash_profile` on Mac)
   ```bash
-  alias <variable>="<command>"
+  alias <variable>="<expression>"
   export PATH="<path>:$PATH"
   ```
 - Zsh (`~/.zshrc` on Ubuntu, `~/.zprofile` on Mac)
   ```zsh
-  alias <variable>="<command>"
+  alias <variable>="<expression>"
   export PATH="<path>:$PATH"
   ```
 - Fish (`~/.config/fish/config.fish`)
   ```fish
-  alias <variable>="<command>"
+  alias <variable>="<expression>"
   set -x PATH $PATH <path>
   ```
 
@@ -51,7 +51,7 @@ Tips and tricks for setting up and interacting with my coding environment
   ```bash
   for <variable> in <iterable>
   do
-    <command>
+    <expression>
   done
   # Elements: <iterable> = <element1> <element2> <element3>
   # Array: <iterable> = "${<array>[@]}"
@@ -62,7 +62,7 @@ Tips and tricks for setting up and interacting with my coding environment
 - Fish:
   ```fish
   for <variable> in <iterable>
-    <command>
+    <expression>
   end
   # Elements: <iterable> = <element1> <element2> <element3>
   # Array: <iterable> = $<array>
@@ -74,15 +74,35 @@ Tips and tricks for setting up and interacting with my coding environment
 #### Conditionals
 - Bash/Zsh:
   ```bash
-  if 
-  # 
+  if [[<condition>]]
+  then
+    <expression>
+  elif [[<condition>]]
+    <expression>
+  then
+  else
+    <expression>
+  fi
+  # Variable: -n/-z <variable> (length > 0, empty)
+  # Numbers: <number1> -eq/-gt/-lt/-ge/-le <number2> (==, >, <, ≥, ≤)
+  # Strings: <string1> =/!= <string2> (equal, not equal)
+  # File: -r/-w/-x/-d/-f/-e <file> (readable, writeable, executable, directory, file, exists)
   ```
 - Fish:
   ```fish
-  if 
+  if test <condition>
+    <expression>
+  else if test <condition>
+    <expression>
+  else
+    <expression>
   end
-  # 
+  # Variable: -n/-z <variable> (length > 0, empty)
+  # Numbers: <number1> -eq/-gt/-lt/-ge/-le <number2> (==, >, <, ≥, ≤)
+  # Strings: <string1> =/!= <string2> (equal, not equal)
+  # File: -r/-w/-x/-d/-f/-e <file> (readable, writeable, executable, directory, file, exists)
   ```
+Note: The `[[<condition>]]` and `test <condition>` constructs can also be replaced entirely with a command to test the exit status.
 
 #### Sort file based on second column and view first 10 entries
 ```bash
