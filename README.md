@@ -85,7 +85,7 @@ Tips and tricks for setting up and interacting with my coding environment
   fi
   # Syntax for <condition>:
   # - Variable: -n/-z <variable> (length > 0, empty)
-  # - Numbers: <number1> -eq/-gt/-lt/-ge/-le <number2> (==, >, <, ≥, ≤)
+  # - Numbers: <number1> -eq/-ne/-gt/-lt/-ge/-le <number2> (==, !=, >, <, ≥, ≤)
   # - Strings: <string1> =/!= <string2> (equal, not equal)
   # - File: -r/-w/-x/-d/-f/-e <file> (readable, writeable, executable, directory, file, exists)
   # NOTE: "[[<condition>]]" construct can be replaced with a command for testing exit status
@@ -101,7 +101,7 @@ Tips and tricks for setting up and interacting with my coding environment
   end
   # Syntax for <condition>:
   # - Variable: -n/-z <variable> (length > 0, empty)
-  # - Numbers: <number1> -eq/-gt/-lt/-ge/-le <number2> (==, >, <, ≥, ≤)
+  # - Numbers: <number1> -eq/-ne/-gt/-lt/-ge/-le <number2> (==, !=, >, <, ≥, ≤)
   # - Strings: <string1> =/!= <string2> (equal, not equal)
   # - File: -r/-w/-x/-d/-f/-e <file> (readable, writeable, executable, directory, file, exists)
   # NOTE: "test <condition>" construct can be replaced with a command for testing exit status
