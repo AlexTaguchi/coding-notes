@@ -84,11 +84,10 @@ Tips and tricks for setting up and interacting with my coding environment
     <expression>
   fi
   # Syntax for <condition>:
-  # Variable: -n/-z <variable> (length > 0, empty)
-  # Numbers: <number1> -eq/-gt/-lt/-ge/-le <number2> (==, >, <, ≥, ≤)
-  # Strings: <string1> =/!= <string2> (equal, not equal)
-  # File: -r/-w/-x/-d/-f/-e <file> (readable, writeable, executable, directory, file, exists)
-  #
+  # - Variable: -n/-z <variable> (length > 0, empty)
+  # - Numbers: <number1> -eq/-gt/-lt/-ge/-le <number2> (==, >, <, ≥, ≤)
+  # - Strings: <string1> =/!= <string2> (equal, not equal)
+  # - File: -r/-w/-x/-d/-f/-e <file> (readable, writeable, executable, directory, file, exists)
   # NOTE: `[[<condition>]]` construct can be replaced with a command for testing the exit status.
   ```
 - Fish:
@@ -105,7 +104,6 @@ Tips and tricks for setting up and interacting with my coding environment
   # - Numbers: <number1> -eq/-gt/-lt/-ge/-le <number2> (==, >, <, ≥, ≤)
   # - Strings: <string1> =/!= <string2> (equal, not equal)
   # - File: -r/-w/-x/-d/-f/-e <file> (readable, writeable, executable, directory, file, exists)
-  #
   # NOTE: `test <condition>` construct can be replaced with a command for testing the exit status.
   ```
 
