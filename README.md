@@ -88,7 +88,7 @@ Tips and tricks for setting up and interacting with my coding environment
   # - Numbers: <number1> -eq/-gt/-lt/-ge/-le <number2> (==, >, <, ≥, ≤)
   # - Strings: <string1> =/!= <string2> (equal, not equal)
   # - File: -r/-w/-x/-d/-f/-e <file> (readable, writeable, executable, directory, file, exists)
-  # NOTE: "[[<condition>]]" construct can be replaced with a command for testing the exit status.
+  # NOTE: "[[<condition>]]" construct can be replaced with a command for testing exit status
   ```
 - Fish:
   ```fish
@@ -104,7 +104,7 @@ Tips and tricks for setting up and interacting with my coding environment
   # - Numbers: <number1> -eq/-gt/-lt/-ge/-le <number2> (==, >, <, ≥, ≤)
   # - Strings: <string1> =/!= <string2> (equal, not equal)
   # - File: -r/-w/-x/-d/-f/-e <file> (readable, writeable, executable, directory, file, exists)
-  # NOTE: "test <condition>" construct can be replaced with a command for testing the exit status.
+  # NOTE: "test <condition>" construct can be replaced with a command for testing exit status
   ```
 
 #### Sort file based on second column and view first 10 entries
