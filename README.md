@@ -309,43 +309,56 @@ git reset --hard origin/master
 
 
 ---
-### Setting up NVIDIA GTX 1080 Ti GPU on Ubuntu
+### NVIDIA Titan RTX GPU on Ubuntu 18
 (Reference: https://gist.github.com/alexlee-gk/76a409f62a53883971a18a11af93241b)
-- Remove old NVIDIA installation and its dependencies
+- Uninstall old NVIDIA drivers
 ```bash
+sudo nvidia-uninstall
 sudo apt purge nvidia*
 sudo apt autoremove
 ```
-- Download NVIDIA driver installation runfile (https://www.nvidia.com/Download/index.aspx) and run script with the option --no-opengl-files (ignore preinstallation error and answer "no" to other options):
+- Download NVIDIA driver installation runfile (https://www.nvidia.com/Download/index.aspx) and run with --no-opengl-files:
 ```bash
-chmod +x NVIDIA-Linux-x86_64-410.78.run
-sudo ./NVIDIA-Linux-x86_64-410.78.run --no-opengl-files
+chmod +x NVIDIA-Linux-x86_64-430.09.run
+sudo ./NVIDIA-Linux-x86_64-430.09.run --no-opengl-files
 ```
-- If the installation fails due to an X server error, stop the display manager and rerun the script:
+- Download NVIDIA CUDA "runfile (local)" (https://developer.nvidia.com/cuda-downloads) and run script (respond "no" when asked "Install NVIDIA accelerated Graphics Driver...?"):
 ```bash
-sudo service lightdm stop
-<Ctrl+Alt+F1>
-sudo ./NVIDIA-Linux-x86_64-410.78.run --no-opengl-files
-sudo service lightdm start
+chmod +x cuda_10.1.105_418.39_linux.run
+sudo ./cuda_10.1.105_418.39_linux.run
 ```
-- Reboot
-- Download NVIDIA CUDA "runfile (local)" (https://developer.nvidia.com/cuda-downloads) and run script (respond "no" when asked "Install NVIDIA accelerated Graphics Driver...?")
-```bash
-chmod +x cuda_10.0.130_410.48_linux.run
-sudo ./cuda_10.0.130_410.48_linux.run 
-```
-- Configure xorg.conf (Modify or create the file /etc/X11/xorg.conf to specify that the NVIDIA GPU should NOT be used for the primary screen)
+- Modify or create `/etc/X11/xorg.conf` to avoid using NVIDIA GPU for primary screen (BusID outputs of `lspci | egrep 'VGA|3D'` must match):
 ```bash
 Section "ServerLayout"
     Identifier "layout"
     Screen 0 "intel"
+    Screen 1 "nvidia"
+EndSection
+
+Section "Device"
+    Identifier "intel"
+    Driver "intel"
+    BusID "PCI:0@0:2:0"
+    Option "AccelMethod" "SNA"
+EndSection
+
+Section "Screen"
+    Identifier "intel"
+    Device "intel"
+EndSection
+
+Section "Device"
+    Identifier "nvidia"
+    Driver "nvidia"
+    BusID "PCI:1@0:0:0"
+    Option "ConstrainCursor" "off"
+EndSection
+
+Section "Screen"
+    Identifier "nvidia"
+    Device "nvidia"
+    Option "AllowEmptyInitialConfiguration" "on"
+    Option "IgnoreDisplayDevices" "CRT"
+EndSection
 ```
 - Reboot
-- Download NVIDIA cuDNN tar file (https://developer.nvidia.com/cudnn), extract, and copy to CUDA directory
-```bash
-tar -xzvf cudnn-10.0-linux-x64-v7.4.1.5.tgz
-sudo cp cuda/include/cudnn.h /usr/local/cuda/include
-sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
-sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
-```
-- Done!
