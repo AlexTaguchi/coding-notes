@@ -107,17 +107,13 @@ Tips and tricks for setting up and interacting with my coding environment
   # NOTE: "test <condition>" construct can be replaced with a command for testing exit status
   ```
 
-#### Sort file based on second column and view first 10 entries
+#### Zip directory recursively and unzip into new directory
 ```bash
-sort -n -k2 <text.txt> | head
-```
-
-#### Unzip file into new directory
-```bash
+zip -r <file.zip> path/to/directory/to/zip
 unzip <file.zip> -d path/to/new/directory
 ```
 
-#### Copy contents of folder into another folder with rsync
+#### Copy contents of folder recursively into another folder
 ```bash
 rsync -av path/to/old/folder path/to/new/folder
 ```
