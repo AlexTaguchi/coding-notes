@@ -88,6 +88,7 @@ Tips and tricks for setting up and interacting with my coding environment
   # Strings: <string1> =/!= <string2> (equal, not equal)
   # File: -r/-w/-x/-d/-f/-e <file> (readable, writeable, executable, directory, file, exists)
   ```
+  Note: The `[[<condition>]]` construct can be replaced entirely with a command to test the exit status.
 - Fish:
   ```fish
   if test <condition>
@@ -102,7 +103,7 @@ Tips and tricks for setting up and interacting with my coding environment
   # Strings: <string1> =/!= <string2> (equal, not equal)
   # File: -r/-w/-x/-d/-f/-e <file> (readable, writeable, executable, directory, file, exists)
   ```
-Note: The `[[<condition>]]` and `test <condition>` constructs can also be replaced entirely with a command to test the exit status.
+  Note: The `test <condition>` construct can be replaced entirely with a command to test the exit status.
 
 #### Sort file based on second column and view first 10 entries
 ```bash
@@ -111,12 +112,12 @@ sort -n -k2 <text.txt> | head
 
 #### Unzip file into new directory
 ```bash
-unzip <file.zip> -d /path/to/new/directory
+unzip <file.zip> -d path/to/new/directory
 ```
 
 #### Copy contents of folder into another folder with rsync
 ```bash
-rsync -av /path/to/old/folder /path/to/new/folder
+rsync -av path/to/old/folder path/to/new/folder
 ```
 
 #### Increase number of files that can be opened at once
