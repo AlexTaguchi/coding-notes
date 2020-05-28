@@ -119,7 +119,10 @@ unzip <file.zip> -d path/to/new/directory
 
 #### Copy contents of folder recursively into another folder
 ```bash
-rsync -av path/to/old/folder path/to/new/folder
+rsync -arv path/to/old/folder path/to/new/folder
+# -a: archived permissions, times, symbolic links, and devices are preserved
+# -r: recurse into directories
+# -v: verbose
 ```
 
 #### Increase number of files that can be opened at once
