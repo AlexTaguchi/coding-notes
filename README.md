@@ -294,7 +294,7 @@ Click the Gear (lower-left corner) -> Settings -> User tab (not Workspace) -> Op
 - &deg; `&deg;`
 - &plusmn; `&plusmn;`
 
-#### Revert local changes to last commit
+#### Undo unadded changes
 ```bash
 git checkout .
 ```
