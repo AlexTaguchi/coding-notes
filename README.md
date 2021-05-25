@@ -117,12 +117,17 @@ zip -r <file.zip> path/to/directory/to/zip
 unzip <file.zip> -d path/to/new/directory
 ```
 
-#### Copy contents of folder recursively into another folder
+#### Recursively overwrite contents of destination folder with source folder
 ```bash
-rsync -arv path/to/source/folder/ path/to/destination/folder/
-# -a: archived permissions, times, symbolic links, and devices are preserved
+rsync -vrlDt --delete --progress path/to/source/folder/ path/to/destination/folder/
+# -v: increase verbosity
 # -r: recurse into directories
-# -v: verbose
+# -l: copy symlinks as symlinks
+# -t: preserve times
+# -D: preserve device and special files
+# -h: output numbers in a human-readable format
+# --delete: delete extraneous files from destination directories
+# --progress: show progress during transfer
 ```
 
 #### Increase number of files that can be opened at once
