@@ -119,13 +119,13 @@ unzip <file.zip> -d path/to/new/directory
 
 #### Recursively overwrite contents of destination folder with source folder
 ```bash
-rsync -vrlDt --delete --progress path/to/source/folder/ path/to/destination/folder/
+rsync -vrlthD --delete --progress path/to/source/folder/ path/to/destination/folder/
 # -v: increase verbosity
 # -r: recurse into directories
 # -l: copy symlinks as symlinks
 # -t: preserve times
-# -D: preserve device and special files
 # -h: output numbers in a human-readable format
+# -D: preserve device and special files
 # --delete: delete extraneous files from destination directories
 # --progress: show progress during transfer
 ```
