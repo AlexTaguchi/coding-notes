@@ -117,6 +117,11 @@ zip -r <file.zip> path/to/directory/to/zip
 unzip <file.zip> -d path/to/new/directory
 ```
 
+#### Recursively grant full permissions for directory
+```bash
+chmod -R 777 path/to/directory/
+```
+
 #### Recursively overwrite contents of destination folder with source folder
 ```bash
 rsync -av --chmod=a+rwx --progress --delete path/to/source/folder/ path/to/destination/folder/
