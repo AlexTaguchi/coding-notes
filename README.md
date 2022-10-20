@@ -124,10 +124,13 @@ chmod -R 777 path/to/directory/
 
 #### Recursively overwrite contents of destination folder with source folder
 ```bash
-rsync -av --chmod=a+rwx --progress --delete path/to/source/folder/ path/to/destination/folder/
-# -a: archive mode (-rlptgoD)
+rsync -rltDhv --delete --progress path/to/source/folder/ path/to/destination/folder/
+# -r: recurse into directories
+# -l: copy symlinks as symlinks
+# -t: preserve modification times
+# -D: preserve device files (super-user only) and special files
+# -h: output numbers in a human-readable format
 # -v: increase verbosity
-# --chmod=a+rwx: set read, write, and execute (+rwx) permissions for all (a) 
 # --delete: delete extraneous files from destination directories
 # --progress: show progress during transfer
 ```
