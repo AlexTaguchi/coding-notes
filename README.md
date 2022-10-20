@@ -132,6 +132,11 @@ rsync -av --chmod=a+rwx --progress --delete path/to/source/folder/ path/to/desti
 # --progress: show progress during transfer
 ```
 
+#### Recursively rename files by regex pattern
+```bash
+find . -name "*<string1>*" | rename "s/<string1>/<string2>/"
+```
+
 #### Increase number of files that can be opened at once
 ```bash
 ulimit -n <number>
