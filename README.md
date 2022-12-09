@@ -333,12 +333,13 @@ git reset --hard origin/master
 
 ---
 ### Build TensorFlow and PyTorch for GPU on Ubuntu 22.04
+*Reference: https://www.tensorflow.org/install/pip*
 1) Create and activate a new conda environment with all Anaconda packages
     ```zsh
     conda create -n <name> anaconda
     conda activate <name>
     ```
-2) Download and install NVIDIA GPU driver (https://www.nvidia.com/drivers):
+2) Download NVIDIA GPU driver from https://www.nvidia.com/drivers and install:
     ```zsh
     chmod +x NVIDIA-Linux-x86_64-<version>.run
     ./NVIDIA-Linux-x86_64-<version>.run
