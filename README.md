@@ -332,6 +332,39 @@ git reset --hard origin/master
 
 
 ---
+### Build TensorFlow and PyTorch for GPU on Ubuntu 22.04
+1. Create and activate a new conda environment with all Anaconda packages
+  ```zsh
+  conda create -n <name> anaconda
+  conda activate <name>
+  ```
+2. Follow TensorFlow installation instructions (https://www.tensorflow.org/install/pip):
+  - Download and install NVIDIA GPU driver (https://www.nvidia.com/drivers):
+  ```zsh
+  chmod +x NVIDIA-Linux-x86_64-<version>.run
+  ./NVIDIA-Linux-x86_64-<version>.run
+  ```
+  - Install CUDA and cuDNN with conda
+  ```zsh
+  conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+  ```
+  - Configure the system paths
+  ```zsh
+  mkdir -p $CONDA_PREFIX/etc/conda/activate.d
+  echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+  ```
+  - Install TensorFlow and verify installation
+  ```zsh
+  pip install tensorflow
+  python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+  ```
+3. Install PyTorch for CUDA version less than or equal to TensorFlow
+  ```zsh
+  pip install torch==1.12.1+cu102 torchvision==0.13.1+cu102 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu102
+  ```
+
+
+---
 ### NVIDIA Titan RTX GPU on Ubuntu 18
 (Reference: https://gist.github.com/alexlee-gk/76a409f62a53883971a18a11af93241b)
 - Uninstall old NVIDIA drivers
