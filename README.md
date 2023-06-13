@@ -236,6 +236,20 @@ See the previous output you missing while away with `ctrl-a` then `esc`. Kill th
 
 
 ---
+### Download HTML directory
+*https://stackoverflow.com/questions/23446635/how-to-download-http-directory-with-all-files-and-sub-directories-as-they-appear*
+```bash
+wget -r -np -nH -R index.html --user <username> --password <password> http://path/to/directory/
+# -r: recursively
+# -np: not going to upper directories
+# -nH: not saving files to hostname folder
+# -R index.html: excluding index.html files
+# -user: username
+# -password: password
+```
+
+
+---
 ### VI
 #### Find and replace one at a time
 ```
