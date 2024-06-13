@@ -360,7 +360,7 @@ git reset --hard origin/master
     ```
 3) Install CUDA and cuDNN with conda
     ```zsh
-    conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+    conda install -c conda-forge cudatoolkit=11.8 cudnn=8.9
     ```
 4) Configure the system paths
     ```zsh
@@ -374,7 +374,8 @@ git reset --hard origin/master
     ```
 6) Install PyTorch for CUDA version less than or equal to TensorFlow
     ```zsh
-    pip install torch==1.12.1+cu102 torchvision==0.13.1+cu102 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu102
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+    python3 -c "import torch; print(torch.cuda.is_available())"
     ```
 
 
