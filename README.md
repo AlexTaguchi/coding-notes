@@ -466,6 +466,14 @@ git reset --hard origin/master
    ```bash
    sudo docker run hello-world
    ```
+5) Create docker group
+   ```bash
+   sudo groupadd docker
+   ```
+7) Add user to docker group
+   ```bash
+   sudo usermod -aG docker $USER
+   ```
 
 
 ---
