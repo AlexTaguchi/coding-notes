@@ -502,5 +502,11 @@ git reset --hard origin/master
    ```bash
    sudo systemctl restart docker
    ```
-
    
+
+---
+### ChimeraX
+- Reassign secondary structure:
+  ```
+  setattr /A:1-5 res ss_type 1 (Set residues 1-5 of chain A as helix)
+  ```
