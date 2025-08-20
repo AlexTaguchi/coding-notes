@@ -510,3 +510,7 @@ git reset --hard origin/master
   ```
   setattr /A:1-5 res ss_type 1 (Set residues 1-5 of chain A as helix)
   ```
+- Align structures to specific residue pairs:
+  ```
+  align #2/A:370,371,372,373@CA /B:370,371,372,373@CA to #1/C:318,319,320,321@CA /D:318,319,320,321@CA
+  ```
