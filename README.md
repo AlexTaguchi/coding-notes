@@ -514,3 +514,8 @@ git reset --hard origin/master
   ```
   align #2/A:370,371,372,373@CA /B:370,371,372,373@CA to #1/C:318,319,320,321@CA /D:318,319,320,321@CA
   ```
+- Copy and paste a color:
+  ```
+  info atomcolor sel (get color hex code like #b0e0e6 for example)
+  color sel #b0e0e6
+  ```
